@@ -11,6 +11,11 @@ Testing Heroku + Node + New Relic
     * Which version am I on? `node --version`
     * Paste the stanza from https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version
 
+# Go go Heroku app
+
+* Copy the Procfile into place containing: `web: node app.js`
+* `heroku local web` (from https://devcenter.heroku.com/articles/deploying-nodejs)
+
 # Usage
 
 * `npm install`
