@@ -7,7 +7,8 @@ Testing Heroku + Node + New Relic
 * `npm init`
 * `npm install express --save` (from http://expressjs.com/en/starter/installing.html)
 * Paste helloworld app from http://expressjs.com/en/starter/hello-world.html into app.js
-* Add the Node version:
+* Set the port based on environment as per https://scotch.io/tutorials/how-to-deploy-a-node-js-app-to-heroku
+* Add the Node version to your package.json:
     * Which version am I on? `node --version`
     * Paste the stanza from https://devcenter.heroku.com/articles/nodejs-support#specifying-a-node-js-version
 
@@ -15,6 +16,10 @@ Testing Heroku + Node + New Relic
 
 * Copy the Procfile into place containing: `web: node app.js`
 * `heroku local web` (from https://devcenter.heroku.com/articles/deploying-nodejs)
+* `heroku login`
+* `heroku create`
+* `git push heroku master`
+* `heroku ps:scale web=1`
 
 # Usage
 
