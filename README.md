@@ -20,6 +20,15 @@ Testing Heroku + Node + New Relic
 * `heroku create`
 * `git push heroku master`
 * `heroku ps:scale web=1`
+* `heroku logs --tail`
+
+# Go go New Relic
+
+* `npm install newrelic --save`
+* `cp node_modules/newrelic/newrelic.js .`
+* Edit newrelic.js to set app name and to pull license key from environment: `process.env.NEW_RELIC_LICENSE_KEY`
+* Set the license key: `heroku config:set NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE`
+* Edit the app.js to add `require newrelic` at the top
 
 # Usage
 

@@ -13,7 +13,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "newrelic": "^1.25.3"
   },
   "devDependencies": {},
   "repository": {
