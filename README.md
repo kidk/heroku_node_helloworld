@@ -29,6 +29,8 @@ Testing Heroku + Node + New Relic
 * Edit newrelic.js to set app name and to pull license key from environment: `process.env.NEW_RELIC_LICENSE_KEY`
 * Set the license key: `heroku config:set NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE`
 * Edit the app.js to add `require newrelic` at the top
+* Push to Heroku:
+    * `git push heroku master && heroku logs --tail`
 
 # Usage
 
