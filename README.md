@@ -1,7 +1,12 @@
 # heroku_node_helloworld
+
 Testing Heroku + Node + New Relic
 
+This repository shows how to create a really simple "Hello World" application from scratch. Follow the steps below to create your own "Hello World" application, deploy it to Heroku, and add New Relic monitoring to it.
+
 # Creation
+
+This will create a project from scratch that is under version control on github.
 
 * Create the repository on github with Node .gitignore and clone locally
 * `npm init`
@@ -14,6 +19,8 @@ Testing Heroku + Node + New Relic
 
 # Go go Heroku app
 
+This will deploy the app on Heroku.
+
 * Copy the Procfile into place containing: `web: node app.js`
 * `heroku local web` (from https://devcenter.heroku.com/articles/deploying-nodejs)
 * `heroku login`
@@ -23,6 +30,8 @@ Testing Heroku + Node + New Relic
 * `heroku logs --tail`
 
 # Go go New Relic
+
+This will add the New Relic agent to the app.
 
 * `npm install newrelic --save`
 * `cp node_modules/newrelic/newrelic.js .`
@@ -36,13 +45,21 @@ Testing Heroku + Node + New Relic
 
 # Usage
 
+This will run this app locally if you download it, rather than building from scratch as defined above.
+
+Get a copy of this app:
+
+* `git clone https://github.com/savs/heroku_node_helloworld.git && cd heroku_node_helloworld`
+
+Grab dependencies:
+
 * `npm install`
 
 And then:
 
-    NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE npm start
+* `NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE npm start`
 
 Or:
 
-    NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE heroku local web
+* `NEW_RELIC_LICENSE_KEY=YOUR_LICENSE_KEY_HERE heroku local web`
 
