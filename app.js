@@ -1,4 +1,4 @@
-require('newrelic');
+newrelic = require('newrelic');
 var express = require('express');
 var app = express();
 // set the port of our application
