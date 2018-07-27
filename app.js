@@ -6,7 +6,17 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 app.get('/', function (req, res) {
-  res.send('<html><head><title>Hello!</title></head><body><h1>Hello World!</h1></body></html>');
+  res.send(`
+<html>
+  <head>
+    <title>Hello!</title>
+    ` + newrelic.getBrowserTimingHeader() + `
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+  </body>
+</html>
+`);
 });
 
 app.listen(port, function () {
